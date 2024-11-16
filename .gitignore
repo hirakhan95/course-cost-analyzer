@@ -99,3 +99,4 @@ env.py
 
 # Static Files
 staticfiles
+kaggle.json
