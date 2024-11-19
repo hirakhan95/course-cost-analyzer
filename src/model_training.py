@@ -64,3 +64,15 @@ def load_or_train_model():
         joblib.dump(scaler, SCALER_PATH)
 
     return tuned_rf_model, X, le_level, le_subject, scaler
+
+
+def plot_feature_importance(model, X):
+    feature_importances = pd.Series(model.feature_importances_, index=X.columns)
+    feature_importances = feature_importances.sort_values(ascending=False)
+
+    plt.figure(figsize=(10, 6))
+    feature_importances.plot(kind='bar')
+    plt.title("Feature Importance")
+    plt.xlabel("Features")
+    plt.ylabel("Importance")
+    st.pyplot(plt)
