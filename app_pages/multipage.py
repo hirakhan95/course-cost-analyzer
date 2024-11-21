@@ -10,7 +10,7 @@ class MultiPage:
 
         st.set_page_config(
             page_title=self.app_name,
-            page_icon="🖥️",
+            page_icon="📊",
             layout="wide"  # Set layout to wide to remove default sidebar
         )
 
