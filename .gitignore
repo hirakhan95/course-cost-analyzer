@@ -101,4 +101,5 @@ env.py
 staticfiles
 kaggle.json
 *.pkl
-input/
+input/logs/
+*.zip
