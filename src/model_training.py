@@ -1,10 +1,15 @@
 # src/model_training.py
+import os
+
 import pandas as pd
 import joblib
 import streamlit as st
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.ensemble import RandomForestRegressor
+
+if not os.path.exists('outputs/model'):
+    os.makedirs('outputs/model')
 
 # Paths to save/load the objects
 MODEL_PATH = 'outputs/model/tuned_rf_model.pkl'
