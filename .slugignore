@@ -1,27 +1,21 @@
-# Local environment and configuration files
-.env
-.env.local
+# Ignore raw datasets and outputs
+inputs/datasets/raw/
 
-# Python cache files and virtual environment
-__pycache__/
+# Ignore Jupyter Notebooks
+jupyter_notebooks/
+
+# Ignore local or system files
 *.pyc
-venv/
+__pycache__/
+.DS_Store
+.vscode/
+.idea/
 
-# Logs and temporary files
+# Ignore logs and temporary files
 logs/
 *.log
 tmp/
 
-
-# IDE and OS-specific files
-.vscode/
-.idea/
-.DS_Store
-
-# Test and debug-related files
-tests/
-*.coverage
-coverage/
-
-jupyter_notebooks
-inputs
+# Ignore virtual environment (if present)
+venv/
+.venv/
