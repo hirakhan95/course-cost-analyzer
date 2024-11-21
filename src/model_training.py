@@ -1,4 +1,3 @@
-# src/model_training.py
 import os
 
 import pandas as pd
@@ -20,6 +19,17 @@ SCALER_PATH = 'outputs/model/scaler.pkl'
 
 
 def load_or_train_model():
+    """
+    Load a pre-trained RandomForestRegressor model and associated objects (LabelEncoders, StandardScaler, and feature set).
+    If the model and objects do not exist, perform feature engineering on the dataset, train the model, and save the objects.
+
+    Returns:
+        tuned_rf_model (RandomForestRegressor): The trained RandomForestRegressor model.
+        X (pd.DataFrame): The feature set used for training the model.
+        le_level (LabelEncoder): LabelEncoder for the 'level' feature.
+        le_subject (LabelEncoder): LabelEncoder for the 'subject' feature.
+        scaler (StandardScaler): StandardScaler used to scale the features.
+    """
     try:
         # Load the objects if they exist
         tuned_rf_model = joblib.load(MODEL_PATH)
@@ -72,6 +82,13 @@ def load_or_train_model():
 
 
 def plot_feature_importance(model, X):
+    """
+    Plot the feature importance of a trained RandomForestRegressor model.
+
+    Args:
+        model (RandomForestRegressor): The trained RandomForestRegressor model.
+        X (pd.DataFrame): The feature set used for training the model.
+    """
     feature_importances = pd.Series(model.feature_importances_, index=X.columns)
     feature_importances = feature_importances.sort_values(ascending=False)
 

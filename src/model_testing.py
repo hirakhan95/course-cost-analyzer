@@ -1,7 +1,24 @@
 import pandas as pd
 
-
 def recommend_price(subscribers, reviews, lectures, duration, level, subject, le_level, le_subject, scaler, model):
+    """
+    Recommend a price for a course based on various input features.
+
+    Args:
+        subscribers (int): Number of subscribers to the course.
+        reviews (int): Number of reviews for the course.
+        lectures (int): Number of lectures in the course.
+        duration (float): Total duration of the course content.
+        level (str): Difficulty level of the course.
+        subject (str): Subject category of the course.
+        le_level (LabelEncoder): LabelEncoder for the 'level' feature.
+        le_subject (LabelEncoder): LabelEncoder for the 'subject' feature.
+        scaler (StandardScaler): StandardScaler used to scale the features.
+        model (RandomForestRegressor): The trained RandomForestRegressor model.
+
+    Returns:
+        float: The recommended price for the course.
+    """
     level_encoded = le_level.transform([level])[0]
     subject_encoded = le_subject.transform([subject])[0]
 
