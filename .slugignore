@@ -22,3 +22,6 @@ tmp/
 tests/
 *.coverage
 coverage/
+
+jupyter_notebooks
+inputs
