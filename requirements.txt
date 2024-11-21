@@ -7,7 +7,6 @@ streamlit
 scikit-learn
 tensorflow
 keras
-jupyterlab
 scipy
 feature_engine
 joblib
