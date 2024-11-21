@@ -1,21 +1,5 @@
-# Ignore raw datasets and outputs
-inputs/datasets/raw/
+# Ignore raw datasets
+inputs/
 
 # Ignore Jupyter Notebooks
 jupyter_notebooks/
-
-# Ignore local or system files
-*.pyc
-__pycache__/
-.DS_Store
-.vscode/
-.idea/
-
-# Ignore logs and temporary files
-logs/
-*.log
-tmp/
-
-# Ignore virtual environment (if present)
-venv/
-.venv/
