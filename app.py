@@ -9,7 +9,7 @@ from app_pages.bi_case_study_3 import page_bi_case_study_3
 from app_pages.analysis import analysis
 from app_pages.model_training_and_testing import page_model_training_and_testing_body  # New page import
 
-app = MultiPage(app_name="Udemy Courses Analysis")
+app = MultiPage(app_name="Course Cost Analysis")
 
 # Add your app pages here using .add_page()
 app.add_page("Quick Project Summary", page_summary_body)
