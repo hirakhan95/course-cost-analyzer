@@ -103,3 +103,6 @@ kaggle.json
 *.pkl
 input/logs/
 *.zip
+# Ignore virtual environment
+.venv/
+venv/
