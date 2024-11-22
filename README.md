@@ -2,7 +2,7 @@
 
 This project focuses on the Udemy Courses Dataset, where I developed a predictive model for course pricing. Using Python, Streamlit and machine learning, I created an interactive application to explore the dataset and predict key course metrics. The app is deployed on Heroku, providing a practical tool for developers and educators to analyze course attributes and trends effectively.
 
-[Course Cost Analyzer](https://course-cost-analyzer-4dbdeb80a36e.herokuapp.com//)
+[Course Cost Analyzer](https://course-cost-analyzer-4dbdeb80a36e.herokuapp.com)
 
 ---
 
