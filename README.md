@@ -51,7 +51,7 @@ The dataset, sourced from Kaggle, contains records of Udemy courses. It includes
 - **Matplotlib/Seaborn**: Visualization tools.
 - **Scikit-learn**: Machine learning pipeline and model building.
 - **Streamlit**: Interactive dashboard development.
-
+- **Feature-engine**: Model building.
 
 ## Deployment
 
