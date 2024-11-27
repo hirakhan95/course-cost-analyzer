@@ -74,6 +74,15 @@ The dataset, sourced from Kaggle, contains records of Udemy courses. It includes
 
 ```
 Course-Cost-Analyzer/
+├── app_pages/
+│   ├── analysis
+│   ├── summary.py
+│   ├── bi_case_study_1
+│   ├── bi_case_study_2
+│   ├── bi_case_study_3
+│   ├── eda
+│   ├── model_training_and_testing
+│   └── multipage.py
 ├── jupyter_notebooks/
 │   ├── 1. Data_Cleaning.ipynb
 │   ├── 2. Exploratory_Data_Analysis.ipynb
@@ -96,10 +105,6 @@ Course-Cost-Analyzer/
 │       ├── le_level.pkl
 │       ├── le_subject.pkl
 │       └── scaler.pkl
-├── app_pages/
-│   ├── model_training_and_testing.py
-│   ├── multipage.py
-│   └── summary.py
 ├── README.md
 ├── requirements.txt
 └── Procfile
@@ -200,13 +205,12 @@ The `src/model_testing.py` script includes the function to recommend a course pr
 The dashboard is designed using Streamlit and consists of the following pages:
 
 1. **Summary Page:**
-   - Provides an overview of the project, including a summary of the dataset and key project terms.
-   - Displays the business requirements and project goals.
-
-2. **Model Training and Testing Page:**
-   - Allows users to train the model or load a pre-trained model.
-   - Displays feature importance of the trained model.
-   - Provides an interface to test the model with sample data and get price recommendations.
+2. **Analysis Page:**
+3. **BI Case Study 1 Page:**
+4. **BI Case Study 2 Page:**
+5. **BI Case Study 3 Page:**
+6. **EDA (Exploratory Data Analysis) Page:**
+7. **Model Training and Testing Page:**
 
 ### Summary Page
 
@@ -214,6 +218,33 @@ The summary page (`app_pages/summary.py`) includes:
 - A project summary with key terms and jargon.
 - Information about the dataset and its attributes.
 - Business requirements and project goals.
+
+### Analysis Page
+
+The analysis page (`app_pages/analysis`) includes:
+- Detailed analysis and visualizations of the dataset.
+- Provide access to a hypothesis test
+
+### BI Case Study 1 Page
+
+The BI case study 1 page (`app_pages/bi_case_study_1`) includes:
+- Specific analyses and findings relevant to the first business intelligence case study.
+
+### BI Case Study 2 Page
+
+The BI case study 2 page (`app_pages/bi_case_study_2`) includes:
+- Specific analyses and findings relevant to the second business intelligence case study.
+
+### BI Case Study 3 Page
+
+The BI case study 3 page (`app_pages/bi_case_study_3`) includes:
+- Specific analyses and findings relevant to the third business intelligence case study.
+
+### EDA Page
+
+The EDA page (`app_pages/eda`) includes:
+- Exploratory data analysis of the dataset.
+- Various visualizations and statistical summaries.
 
 ### Model Training and Testing Page
 
@@ -237,4 +268,3 @@ The `MultiPage` class (`app_pages/multipage.py`) is used to generate multiple St
 - **Libraries:** Pandas, NumPy, Matplotlib, Scikit-learn, Streamlit
 - **Inspiration:** Data Science projects on Kaggle and Streamlit documentation.
 - **Stackoverflow:** For bugs and errors.
-```
