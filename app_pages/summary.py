@@ -2,64 +2,30 @@ import streamlit as st
 
 
 def page_summary_body():
-    st.title("Quick Project Summary")
+    st.write("# Course Cost Analyzer")
 
-    st.markdown(
-        """
-        <div style="background-color: #f0f8ff; padding: 10px; border-radius: 5px;">
-            <h2 style="color: #00008b;">Project Overview</h2>
-            <p>This project analyzes the Udemy courses dataset to understand various trends and insights. The dataset contains information about:</p>
-            <ul>
-                <li>Course titles</li>
-                <li>URLs</li>
-                <li>Whether the course is paid or free</li>
-                <li>Price</li>
-                <li>Number of subscribers</li>
-                <li>Reviews</li>
-                <li>Lectures</li>
-                <li>Level</li>
-                <li>Content duration</li>
-                <li>Published timestamp</li>
-                <li>Subject</li>
-            </ul>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.write("#### Quick Project Summary")
 
-    st.markdown(
-        """
-        <div style="background-color: #e6ffe6; padding: 10px; border-radius: 5px;">
-            <h2 style="color: #006400;">Exploratory Data Analysis (EDA)</h2>
-            <p>The EDA page provides visual insights into the dataset, including:</p>
-            <ul>
-                <li>Distribution of courses by subject</li>
-                <li>Paid vs. free courses</li>
-                <li>Price distribution of paid courses</li>
-                <li>Top 10 courses by subscribers</li>
-                <li>Reviews vs. subscribers</li>
-                <li>Average content duration by level</li>
-                <li>Number of courses published each month</li>
-                <li>Total subscribers by subject</li>
-                <li>Lectures vs. duration</li>
-            </ul>
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+    st.info(
+        f"This project analyzes the Udemy courses dataset from Kaggle to uncover trends and insights into online learning. The dataset provides detailed information about course titles, pricing, subscriber counts, reviews, content duration, levels, and subjects.\n"
+        f"The analysis focuses on understanding how key factors like content duration, price, and subject category influence engagement metrics, including the number of subscribers and reviews.\n \n"
+        
+        
+        f"**Project Terms & Jargon**\n"
+        f"- **Content Duration (hours)**: Total hours of course material.\n"
+        f"- **Number of Subscribers**: Total students enrolled in each course.\n"
+        f"- **Number of Reviews**: Feedback count provided by students.\n"
+        f"- **Price**: Course cost (if paid).\n"
+        f"- **Subject**: The category or topic of the course (e.g., Programming, Business).\n"
+        f"- **Level**: Course difficulty (e.g., Beginner, Intermediate, Expert).\n")
 
-    st.markdown(
-        """
-        <div style="background-color: #fff0f5; padding: 10px; border-radius: 5px;">
-            <h2 style="color: #8b0000;">Model Training and Testing</h2>
-            <p>The Model Training and Testing page allows users to:</p>
-            <ul>
-                <li>Train a model to predict course prices</li>
-                <li>View feature importance</li>
-                <li>Test the model with sample data</li>
-                <li>Get price recommendations based on the model</li>
-            </ul>
-        </div>
-        """,
-        unsafe_allow_html=True
+    st.write(
+        f"* For additional information, please visit and **read** the "
+        f"[Project README file](https://github.com/hirakhan95/course-cost-analyzer).")
+
+    st.success(
+        f"The project has 3 business requirements:\n"
+        f"* 1 - The client is interested in adjusting the pricing of paid courses to maximize revenue while maintaining competitive advantage in the market.\n"
+        f"* 2 - The client wants to know the best-performing courses to feature in marketing campaigns to drive more traffic and sales. \n"
+        f"* 3 - The client is interested in optimizing the course content (e.g., number of lectures, content duration) to improve engagement and student retention."
     )
