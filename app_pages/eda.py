@@ -14,7 +14,6 @@ def page_eda_body():
     st.title("Exploratory Data Analysis (EDA)")
 
     st.subheader("Dataset Information")
-    st.write(df.info())
 
     st.subheader("First 5 Rows of the Dataset")
     st.write(df.head())
