@@ -53,29 +53,25 @@ def page_bi_case_study_2():
     df = load_data()
 
     st.subheader("Top 10 Courses by Subscribers")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This chart shows the top 10 courses based on the number of subscribers. It helps in identifying the most popular courses.</div>',
-        unsafe_allow_html=True)
+    st.write(
+        "This chart shows the top 10 courses based on the number of subscribers. It helps in identifying the most popular courses.")
     if st.checkbox("Show Top 10 Courses by Subscribers Chart"):
         plot_top_courses_by_subscribers(df)
 
     st.subheader("Total Subscribers by Subject")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This bar chart shows the total number of subscribers for each subject. It helps in understanding which subjects are more popular among students.</div>',
-        unsafe_allow_html=True)
+    st.write(
+        "This bar chart shows the total number of subscribers for each subject. It helps in understanding which subjects are more popular among students.")
     if st.checkbox("Show Total Subscribers by Subject Chart"):
         plot_total_subscribers_by_subject(df)
 
     st.subheader("Reviews vs Subscribers")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This scatter plot illustrates the relationship between the number of reviews and the number of subscribers. It helps in identifying if courses with more reviews attract more subscribers.</div>',
-        unsafe_allow_html=True)
+    st.write(
+        "This scatter plot illustrates the relationship between the number of reviews and the number of subscribers. It helps in identifying if courses with more reviews attract more subscribers.")
     if st.checkbox("Show Reviews vs Subscribers Chart"):
         plot_reviews_vs_subscribers(df)
 
     st.subheader("Paid vs Free Courses Performance")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This section displays the performance of paid and free courses by showing the top 10 courses in each category based on the number of subscribers.</div>',
-        unsafe_allow_html=True)
+    st.write(
+        "This section displays the performance of paid and free courses by showing the top 10 courses in each category based on the number of subscribers.")
     if st.checkbox("Show Paid vs Free Courses Performance"):
         display_paid_vs_free_courses_performance(df)
