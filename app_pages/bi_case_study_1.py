@@ -52,29 +52,25 @@ def page_bi_case_study_1():
     paid_courses = load_data()
 
     st.subheader("Price Distribution")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This chart shows the distribution of prices for paid courses. It helps in understanding the common price points and the spread of course prices.</div>',
-        unsafe_allow_html=True)
+    st.write(
+        "This chart shows the distribution of prices for paid courses. It helps in understanding the common price points and the spread of course prices.")
     if st.checkbox("Show Price Distribution Chart"):
         plot_price_distribution(paid_courses)
 
     st.subheader("Subscribers vs Course Price")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This scatter plot illustrates the relationship between the number of subscribers and the price of the courses. It helps in identifying if higher-priced courses attract more or fewer subscribers.</div>',
-        unsafe_allow_html=True)
+    st.write(
+        "This scatter plot illustrates the relationship between the number of subscribers and the price of the courses. It helps in identifying if higher-priced courses attract more or fewer subscribers.")
     if st.checkbox("Show Subscribers vs Course Price Chart"):
         plot_subscribers_vs_price(paid_courses)
 
     st.subheader("Average Price by Subject")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This bar chart shows the average price of courses grouped by subject. It helps in understanding which subjects have higher or lower average prices.</div>',
-        unsafe_allow_html=True)
+    st.write(
+        "This bar chart shows the average price of courses grouped by subject. It helps in understanding which subjects have higher or lower average prices.")
     if st.checkbox("Show Average Price by Subject Chart"):
         plot_average_price_by_subject(paid_courses)
 
     st.subheader("Average Price by Level")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This bar chart displays the average price of courses grouped by their level (e.g., beginner, intermediate, expert). It helps in understanding the pricing strategy based on course difficulty.</div>',
-        unsafe_allow_html=True)
+    st.write(
+        "This bar chart displays the average price of courses grouped by their level (e.g., beginner, intermediate, expert). It helps in understanding the pricing strategy based on course difficulty.")
     if st.checkbox("Show Average Price by Level Chart"):
         plot_average_price_by_level(paid_courses)
