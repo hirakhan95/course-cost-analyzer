@@ -17,7 +17,8 @@ This project focuses on the Udemy Courses Dataset, where I developed a predictiv
 7. [Model Training](#model-training)
 8. [Model Testing](#model-testing)
 9. [Deployment](#deployment)
-10. [Credits and References](#credits-and-references)
+10. [Dashboard Design](#dashboard-design)
+11. [Credits and References](#credits-and-references)
 
 ---
 
@@ -95,6 +96,10 @@ Course-Cost-Analyzer/
 │       ├── le_level.pkl
 │       ├── le_subject.pkl
 │       └── scaler.pkl
+├── app_pages/
+│   ├── model_training_and_testing.py
+│   ├── multipage.py
+│   └── summary.py
 ├── README.md
 ├── requirements.txt
 └── Procfile
@@ -187,6 +192,42 @@ The `src/model_testing.py` script includes the function to recommend a course pr
 
 3. **Deploy:**
    - Set up Heroku application and push the branch.
+
+---
+
+## Dashboard Design
+
+The dashboard is designed using Streamlit and consists of the following pages:
+
+1. **Summary Page:**
+   - Provides an overview of the project, including a summary of the dataset and key project terms.
+   - Displays the business requirements and project goals.
+
+2. **Model Training and Testing Page:**
+   - Allows users to train the model or load a pre-trained model.
+   - Displays feature importance of the trained model.
+   - Provides an interface to test the model with sample data and get price recommendations.
+
+### Summary Page
+
+The summary page (`app_pages/summary.py`) includes:
+- A project summary with key terms and jargon.
+- Information about the dataset and its attributes.
+- Business requirements and project goals.
+
+### Model Training and Testing Page
+
+The model training and testing page (`app_pages/model_training_and_testing.py`) includes:
+- A button to plot feature importance of the trained model.
+- Input fields for testing the model with sample data (number of subscribers, reviews, lectures, content duration, course level, and subject).
+- A button to recommend a price based on the input features.
+
+### MultiPage Class
+
+The `MultiPage` class (`app_pages/multipage.py`) is used to generate multiple Streamlit pages using an object-oriented approach. It includes:
+- Initialization of the application with a specified name and configuration.
+- Methods to add pages to the application.
+- A method to run the application and display the selected page from the sidebar menu.
 
 ---
 
