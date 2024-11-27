@@ -132,20 +132,20 @@ def hypothesis_test(df):
     long = df[df['duration_category'] == 'Cluster 3']['num_subscribers']
 
     # Check the length and unique values of each group
-    st.write(f"Cluster 1 (short) count: {len(short)}, unique values: {short.nunique()}")
-    st.write(f"Cluster 2 (medium) count: {len(medium)}, unique values: {medium.nunique()}")
-    st.write(f"Cluster 3 (long) count: {len(long)}, unique values: {long.nunique()}")
+    st.info(f"Cluster 1 (short) count: {len(short)}, unique values: {short.nunique()}")
+    st.info(f"Cluster 2 (medium) count: {len(medium)}, unique values: {medium.nunique()}")
+    st.info(f"Cluster 3 (long) count: {len(long)}, unique values: {long.nunique()}")
 
     if len(short) < 2 or len(medium) < 2 or len(long) < 2:
-        st.write("Not enough data in one or more clusters to perform ANOVA.")
+        st.warning("Not enough data in one or more clusters to perform ANOVA.")
         return None, None
 
     stat, p_value = f_oneway(short, medium, long)
     st.write(f"ANOVA Test Statistic: {stat:.2f}, P-Value: {p_value:.5f}")
     if p_value < 0.05:
-        st.write("There is a significant difference in the number of subscribers across duration categories.")
+        st.success("There is a significant difference in the number of subscribers across duration categories.")
     else:
-        st.write("No significant difference in subscribers across duration categories.")
+        st.error("No significant difference in subscribers across duration categories.")
     return stat, p_value
 
 
@@ -157,14 +157,14 @@ def analysis():
     df = preprocess_data(df)
 
     st.subheader("Exploratory Data Analysis")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This section provides summary statistics and visualizations to understand the distribution of content duration and number of subscribers.</div>',
+    st.write(
+        '<div style="background-color: var(--background-secondary); padding: 10px;">This section provides summary statistics and visualizations to understand the distribution of content duration and number of subscribers.</div>',
         unsafe_allow_html=True)
     explore_data(df)
 
     st.subheader("Clustering Courses by Content Duration")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This section clusters courses into short, medium, and long categories based on content duration.</div>',
+    st.write(
+        '<div style="background-color: var(--background-secondary); padding: 10px;">This section clusters courses into short, medium, and long categories based on content duration.</div>',
         unsafe_allow_html=True)
     df = cluster_courses_by_duration(df)
     if df is None:
@@ -172,19 +172,19 @@ def analysis():
         return
 
     st.subheader("Performance Metrics Analysis")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This section analyzes the performance metrics (ratings, reviews, subscribers) across different duration categories.</div>',
+    st.write(
+        '<div style="background-color: var(--background-secondary); padding: 10px;">This section analyzes the performance metrics (ratings, reviews, subscribers) across different duration categories.</div>',
         unsafe_allow_html=True)
     analyze_performance_metrics(df)
 
     st.subheader("Yearly Trends Analysis")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This section examines trends in course metrics over the years.</div>',
+    st.write(
+        '<div style="background-color: var(--background-secondary); padding: 10px;">This section examines trends in course metrics over the years.</div>',
         unsafe_allow_html=True)
     analyze_yearly_trends(df)
 
     st.subheader("Hypothesis Testing")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This section conducts ANOVA to determine if there is a significant difference in metrics across clusters.</div>',
+    st.write(
+        '<div style="background-color: var(--background-secondary); padding: 10px;">This section conducts ANOVA to determine if there is a significant difference in metrics across clusters.</div>',
         unsafe_allow_html=True)
     hypothesis_test(df)
