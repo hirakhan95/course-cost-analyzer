@@ -43,22 +43,19 @@ def page_bi_case_study_3():
     df = load_data()
 
     st.subheader("Content Duration vs Subscribers")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This scatter plot shows the relationship between the content duration of courses and the number of subscribers. It helps in understanding if longer or shorter courses attract more subscribers.</div>',
-        unsafe_allow_html=True)
+    st.write(
+        "This scatter plot shows the relationship between the content duration of courses and the number of subscribers. It helps in understanding if longer or shorter courses attract more subscribers.")
     if st.checkbox("Show Content Duration vs Subscribers Chart"):
         plot_content_duration_vs_subscribers(df)
 
     st.subheader("Number of Lectures vs Content Duration")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This scatter plot illustrates the relationship between the number of lectures and the content duration of courses. It helps in understanding how the number of lectures correlates with the total duration of the course.</div>',
-        unsafe_allow_html=True)
+    st.write(
+        "This scatter plot illustrates the relationship between the number of lectures and the content duration of courses. It helps in understanding how the number of lectures correlates with the total duration of the course.")
     if st.checkbox("Show Number of Lectures vs Content Duration Chart"):
         plot_num_lectures_vs_content_duration(df)
 
     st.subheader("Average Content Duration by Level")
-    st.markdown(
-        '<div style="background-color: #f0f0f0; padding: 10px;">This bar chart shows the average content duration of courses grouped by their level (e.g., beginner, intermediate, expert). It helps in understanding the typical course duration for each level.</div>',
-        unsafe_allow_html=True)
+    st.write(
+        "This bar chart shows the average content duration of courses grouped by their level (e.g., beginner, intermediate, expert). It helps in understanding the typical course duration for each level.")
     if st.checkbox("Show Average Content Duration by Level Chart"):
         plot_average_content_duration_by_level(df)
